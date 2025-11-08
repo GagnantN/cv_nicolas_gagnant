@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pygame – TerritoryCapture</title>
+  <title>Projet – TerritoryCapture</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="sidebar">
-    <h2>Portfolio</h2>
-    <ul>
-      <li><a href="index.html">CV en ligne</a></li>
-      <li><a class="active" href="project-pygame.html">Projet Pygame</a></li>
-    </ul>
-  </nav>
+  <!-- Navbar injectée ici dynamiquement -->
+  <div id="navbar"></div>
 
   <!-- PAGE CENTRÉE COMME INDEX -->
   <div class="page-content">
@@ -133,5 +127,6 @@ def place_player(color, min_lin, max_lin, min_col, max_col):
     </div>
   </div>
 
+  <script src="load.js"></script>
 </body>
 </html>
