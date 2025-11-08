@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Nicolas GAGNANT</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="code/css/style.css">
 </head>
 <body>
 
-  <!-- Navbar injectée ici dynamiquement -->
-  <div id="navbar"></div>
+  <!-- ================== NAVBAR INJECTÉE DIRECTEMENT ================== -->
+  <nav class="sidebar">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="index.html">CV en ligne</a></li>
+      <li><a href="code/html/project_territoryCapture.html">Projet Territory Capture</a></li>
+      <li><a href="code/html/project_chatGames.html">Projet Chat Games</a></li>
+      <li><a href="code/html/project_lifeInno.html">Projet Life Inno</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Auto active le bon lien dans la navbar
+    const page = location.pathname.split("/").pop();
+    document.querySelectorAll(".sidebar a").forEach(link => {
+      if (link.getAttribute("href") === page || link.getAttribute("href").endsWith(page)) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+  <!-- ================== FIN NAVBAR ================== -->
 
   <div class="page-content">
     <div class="cv-container">
@@ -71,8 +90,8 @@
 
           <!-- Projet Pygame → pas de modal, redirection -->
           <div class="project direct-link"
-            data-link="project-pygame.html">
-            <h4>Projet TerritoryCapture – Handigital 2025 (durée 2 semaines)</h4>
+            data-link="code/html/project_territoryCapture.html">
+            <h4>Projet TerritoryCapture – Handigital 2025 (durées 47 heures)</h4>
             <h4>Création d’un jeu avec le framework Pygame en équipe.</h4>
             <ul>
               <li>Créer un cahier des charges</li>
@@ -82,11 +101,9 @@
           </div>
 
           <!-- Projet modal -->
-          <div class="project"
-            data-title="Projet Soutenance web"
-            data-description="Application web PHP / JS / SQL permettant la mise en relation de joueurs."
-            data-link="https://github.com/GagnantN/TON_REPO_DU_PROJET">
-            <h4>Projet Soutenance – Handigital 2025 (durée 6 mois et demi)</h4>
+          <div class="project direct-link"
+            data-link="code/html/project_chatGames.html">
+            <h4>Projet Soutenance – Handigital 2025 (durées 365 heures)</h4>
             <h4>Application web (PHP / JS / SQL) pour mettre en relation des gamers.</h4>
             <ul>
               <li>Analyse et compréhension du cahier des charges d’un client fictif ;</li>
@@ -96,11 +113,9 @@
             </ul>
           </div>
 
-          <div class="project"
-            data-title="Projet Survive (HTML/CSS/JS)"
-            data-description="Jeu de survie entièrement réalisé en code front (HTML / CSS / Javascript)."
-            data-link="https://github.com/GagnantN/TON_REPO_DU_PROJET">
-            <h4>Projet Survive – Handigital 2024 (durée 1 semaine)</h4>
+          <div class="project direct-link"
+            data-link="code/html/project_lifeInno.html">
+            <h4>Projet LifeInno – Handigital 2024 (durées 30 heures)</h4>
             <h4>Jeu de survie sur page web statique.</h4>
             <ul>
               <li>HTML</li>
@@ -132,7 +147,7 @@
       </main>
     </div>
 
-    <!-- OVERLAY -->
+     <!-- MODAL -->
     <div id="project-modal" class="modal">
       <div class="modal-content">
         <span id="close-modal" class="close">&times;</span>
@@ -142,7 +157,9 @@
       </div>
     </div>
 
-    <script src="main.js"></script>
   </div>
+
+  <script src="code/js/main.js"></script>
+
 </body>
 </html>

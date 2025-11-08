@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet – TerritoryCapture</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar injectée ici dynamiquement -->
+  <div id="navbar"></div>
+
+  <!-- PAGE CENTRÉE COMME INDEX -->
+  <div class="page-content">
+    <div class="cv-container">
+
+      <!-- ✅ COLONNE GAUCHE AJOUTÉE POUR ALIGNEMENT -->
+      <aside class="left-column">
+        <section>
+          <h3>PROJET PYGAME</h3>
+          <p>
+            Ce projet a été réalisé en équipe avec le moteur Python avec le framework Pygame.<br><br>
+            Objectif : stratégie & capture de territoires sur grille, multijoueur en local.
+          </p>
+        </section>
+
+        <section>
+          <h3>TECHNOLOGIES</h3>
+          <ul>
+            <li>Python</li>
+            <li>Framework Pygame</li>
+            <li>Git / GitHub</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>COMPÉTENCES</h3>
+          <ul>
+            <li>Développement jeu 2D</li>
+            <li>Gestion grille & map</li>
+            <li>Interface UI / menus</li>
+            <li>Collaboration Git</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>GITHUB</h3>
+          <ul>
+            <li>
+              <a href="https://github.com/GagnantN/Territory_Capture">Code Territory Capture</a>
+            </li> 
+          </ul>
+        </section>
+      </aside>
+
+      <!-- CONTENU PROJET -->
+      <main class="right-column">
+
+        <!-- TITRE DU PROJET -->
+        <header>
+          <h1>TerritoryCapture</h1>
+          <h2>Jeu Python développé avec Pygame</h2>
+        </header>
+
+        <!-- VIDÉO -->
+        <section>
+          <h3>Vidéo de démonstration</h3>
+          <video controls width="100%" class="project-video">
+            <source src="../../assets/videos/project_pygame.mp4" type="video/mp4">
+          </video>
+        </section>
+
+        <!-- ✅ CARROUSEL -->
+        <section>
+          <h3>Galerie de code</h3>
+
+          <div class="carousel">
+
+            <div class="carousel-images">
+              <img class="active" src="../../assets/images/project_pygame/menu.png" alt="menu">
+              <img src="../../assets/images/project_pygame/map.png" alt="map">
+              <img src="../../assets/images/project_pygame/interface.png" alt="interface">
+            </div>
+
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+
+            <div class="carousel-dots"></div>
+
+          </div>
+        </section>
+
+        <!-- FULLSCREEN OVERLAY IMAGE -->
+        <div id="imgOverlay" class="img-overlay">
+          <button class="close-img">✖</button>
+          <img id="overlayImage">
+          <button class="overlay-prev">❮</button>
+          <button class="overlay-next">❯</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/carousel.js"></script>
+</body>
+</html>
